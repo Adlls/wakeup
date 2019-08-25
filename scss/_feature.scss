@@ -10,11 +10,37 @@
     .f_icon{
         min-height: 91px;
         position: relative;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 75px;
         img{
             position: absolute;
             bottom: 0px;
             left: 50%;
             transform: translateX(-50%);
+        }
+        .fa {
+          font-size: 60px;
+          position: relative;
+          opacity: 0.95;
+        }
+
+  
+        .fa.f-1 {
+          right: 15px;
+          top: 25px;
+          color: #e8f4ff;
+        }
+        .fa.f-2 {
+          left: 15px;
+          top: 25px;
+          color: #f7e4ff;
+        }
+
+        .fa.f-3 {
+          right: 15px;
+          top: 25px;
+          color: #e8f4ff;
         }
     }
     h4{

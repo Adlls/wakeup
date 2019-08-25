@@ -22,8 +22,24 @@
             color: $dip;
             margin-top: -13px;
         }
+
+        &:before {
+          content:"на";
+          font-size: 13px;
+          font-family: $rob;
+          color: $pfont;
+          font-weight: 500;
+          position: absolute;
+          left: 0px;
+          top: 10%;
+          transform: translateY(-50%);
+          width: 100%;
+          text-align: center;
+          margin-top: 18px;
+        }
+
         h4{
-            font-size: 14px;
+            font-size: 15px;
             font-family: $rob;
             color: $pfont;
             font-weight: 500;
@@ -57,6 +73,7 @@
                 top: 5px;
                 background: #fff;
             }
+
         }
     }
 }

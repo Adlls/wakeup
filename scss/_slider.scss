@@ -22,6 +22,7 @@
             }
         }
         .tp-bullets{
+            display: none;
             left: calc(50% - 970px) !important;
             .tp-bullet{
                 height: 10px;
@@ -35,6 +36,7 @@
             }
         }
         .tp-leftarrow, .tp-rightarrow{
+            display: none;
             height: 120px;
             background-image: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
             background-size: 200% auto;

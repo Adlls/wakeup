@@ -23,6 +23,20 @@ $pfont: #7c8d93;
   &::-webkit-input-placeholder { @content; }
 }
 
+@mixin logoSet {
+  .navbar-brand {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+}
+}
+
 .col-md-offset-right-1,.col-lg-offset-right-1{
     margin-right: 8.33333333%;
 }

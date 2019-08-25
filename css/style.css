@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*----------------------------------------------------
 @File: Default Styles
 @Author: Rocky
@@ -369,6 +370,7 @@ i:before {
   padding: 0px 53px;
 }
 .main_slider_area .rev_slider .tp-bullets {
+  display: none;
   left: calc(50% - 970px) !important;
 }
 .main_slider_area .rev_slider .tp-bullets .tp-bullet {
@@ -382,6 +384,7 @@ i:before {
   border-color: #97cdfe;
 }
 .main_slider_area .rev_slider .tp-leftarrow, .main_slider_area .rev_slider .tp-rightarrow {
+  display: none;
   height: 120px;
   background-image: linear-gradient(to right, #70bafe 0%, #998dff 51%, #70bafe 100%);
   background-size: 200% auto;
@@ -508,12 +511,35 @@ i:before {
 .feature_item .f_icon {
   min-height: 91px;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 75px;
 }
 .feature_item .f_icon img {
   position: absolute;
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
+}
+.feature_item .f_icon .fa {
+  font-size: 60px;
+  position: relative;
+  opacity: 0.95;
+}
+.feature_item .f_icon .fa.f-1 {
+  right: 15px;
+  top: 25px;
+  color: #e8f4ff;
+}
+.feature_item .f_icon .fa.f-2 {
+  left: 15px;
+  top: 25px;
+  color: #f7e4ff;
+}
+.feature_item .f_icon .fa.f-3 {
+  right: 15px;
+  top: 25px;
+  color: #e8f4ff;
 }
 .feature_item h4 {
   color: #0b1033;
@@ -1452,8 +1478,22 @@ i:before {
   color: #0b1033;
   margin-top: -13px;
 }
+.circle_progress .circle_progress_inner:before {
+  content: "на";
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  color: #7c8d93;
+  font-weight: 500;
+  position: absolute;
+  left: 0px;
+  top: 10%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  margin-top: 18px;
+}
 .circle_progress .circle_progress_inner h4 {
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Roboto", sans-serif;
   color: #7c8d93;
   font-weight: 500;
@@ -1985,6 +2025,19 @@ i:before {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
+.f_about_widget .navbar-brand {
+  font-size: 40px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.f_about_widget .navbar-brand:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.f_about_widget .navbar-brand {
+  color: white;
+}
 
 .f_insta_widget ul {
   overflow: hidden;
@@ -1994,11 +2047,12 @@ i:before {
   width: calc(100% / 4);
   float: left;
 }
-.f_insta_widget ul li a {
+.f_insta_widget ul li span {
+  cursor: pointer;
   display: inline-block;
   padding: 1px;
 }
-.f_insta_widget ul li a img {
+.f_insta_widget ul li span img {
   width: 100%;
 }
 
@@ -2061,7 +2115,7 @@ i:before {
 }
 .footer_copyright .float-sm-left h5 {
   font-size: 14px;
-  color: #2a2f56;
+  color: white;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -2073,7 +2127,7 @@ i:before {
 }
 .footer_copyright .float-sm-right ul li a {
   font-size: 14px;
-  color: #2a2f56;
+  color: white;
   transition: all 400ms linear 0s;
 }
 .footer_copyright .float-sm-right ul li:last-child {

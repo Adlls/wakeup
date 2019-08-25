@@ -9,7 +9,6 @@
     padding: 130px 0px 115px 0px;
 }
 .footer_widget_inner{
-    
 }
 .f_widget{
     
@@ -35,6 +34,11 @@
         font-family: $rob;
         font-weight: 500;
     }
+
+    @include logoSet;
+    .navbar-brand {
+      color: white;
+    }
 }
 .f_insta_widget{
     ul{
@@ -43,7 +47,8 @@
         li{
             width: calc(100% / 4);
             float: left;
-            a{
+            span {
+                cursor: pointer;
                 display: inline-block;
                 padding: 1px;
                 img{
@@ -95,7 +100,7 @@
     .float-sm-left{
         h5{
             font-size: 14px;
-            color: #2a2f56;
+            color: white;
             font-family: $rob;
             text-transform: uppercase;
             font-weight: 500;
@@ -109,7 +114,7 @@
                 margin-right: 32px;
                 a{
                     font-size: 14px;
-                    color: #2a2f56;
+                    color: white;
                     @include transition;
                 }
                 &:last-child{
