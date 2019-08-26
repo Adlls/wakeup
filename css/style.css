@@ -1259,6 +1259,7 @@ i:before {
 ============================================================================================ */
 .get_in_touch_area {
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .contact_us_form {
