@@ -4,6 +4,8 @@
     padding-top: 70px;
 }
 .feature_item{
+    border: 1px solid rgba(187, 190, 193, 0.2);
+    border-radius: 5px;
     text-align: center;
     padding: 40px 0px 60px 0px;
     @include transition;
@@ -58,13 +60,14 @@
         font-weight: 500;
         max-width: 290px;
         margin: auto;
-        padding-bottom: 60px;
+        padding-bottom: 30px;
     }
     .more_btn{
         opacity: 0;
     }
     &:hover{
         box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.11);
+        border-width: 0px;
         .more_btn{
             opacity: 1;
         }
@@ -72,12 +75,20 @@
 }
 
 .service_feature{
-    border-bottom: 1px solid #bbbec1;
+    //border-bottom: 1px solid #bbbec1;
+    @include transition;
     padding-top: 100px;
+    padding-bottom: 50px;
     overflow: hidden;
+    .group-card {
+      transition: 0.5s;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
     .feature_inner{
         margin-bottom: -50px;
         .feature_item{
+            cursor: pointer;
             margin-bottom: 50px;
             .more_btn{
                 opacity: 1;
@@ -89,6 +100,7 @@
                 background-clip: text;
                 @include transition;
                 background-size: 200% auto;
+
             }
             &:hover{
                 .more_btn{
@@ -97,9 +109,80 @@
                     border-color: rgba(204, 241, 255, .5);
                     background-clip: inherit;
                 }
+      
             }    
         }
     }
+    .card{
+      @include transition;
+      margin-bottom: 25px;
+      border: none;
+
+   
+
+      &:last-child{
+          margin-bottom: 0px;
+      }
+      .card-header{
+          padding: 0px;
+          border: none;
+          background-color: transparent;
+          h5{
+              a{
+                  background: #79ccff; 
+                  background: -moz-linear-gradient(left, #79ccff 0%, #9b75ff 100%);
+                  background: -webkit-linear-gradient(left, #79ccff 0%,#9b75ff 100%); 
+                  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79ccff', endColorstr='#9b75ff',GradientType=1 );
+                  display: block;
+                  color: #fff;
+                  font-size: 16px;
+                  font-family: $rob;
+                  font-weight: 500;
+                  padding: 11px 25px 11px 20px;
+                  line-height: 26px;
+                  position: relative;
+                  i{
+                      display: inline-block;
+                      font-style: normal;
+                      position: absolute;
+                      right: 20px;
+                      line-height: 30px;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      & + i{
+                          display: none;
+                      }
+                  }
+              }
+              .collapsed{
+                  i{
+                      display: none;
+                      & + i{
+                          display: inline-block;
+                      }
+                  }
+              }
+          }
+      }
+      .card-body{
+          ul {
+            list-style:  disc;
+            li {
+              font-size: 16px;
+              line-height: 28px;
+              font-family: $rob;
+              font-weight: normal;
+              color: $pfont;
+              
+            }
+          }
+
+          p {
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+      }
+  }
 }
 
 
