@@ -558,7 +558,7 @@ i:before {
   font-weight: 500;
   max-width: 290px;
   margin: auto;
-  padding-bottom: 30px;
+  padding-bottom: 5px;
 }
 .feature_item .more_btn {
   opacity: 0;

@@ -242,7 +242,7 @@
     /*  Google map js
     /*----------------------------------------------------*/
     
-    /*
+    console.log("kekekekeekekekekfvoad");
     if ( $('#mapBox1').length ){
         var $lat = $('#mapBox1').data('lat');
         var $lon = $('#mapBox1').data('lon');
@@ -282,45 +282,15 @@
             lat: $markerLat,
             lng: $markerLon,
             icon: $marker,    
-            title: "tit",
             infoWindow: {
               content: $info
             }
-        })
+        });
         
     }
-  */
+  
 
-
-
- if ($('#mapBox1').length > 0) {
-  var map;
-  map = new GMaps({
-    div: '#mapBox1',
-    lat: 53.899961,
-    lng: 27.546139,
-    zoom: 13
-  });
-
-
-  if (typeof map !='undefined') {
-    map.addMarker({
-      lat: 53.886400,
-      lng: 27.559400,
-      title: 'Отметка 1',          
-    });
-    map.addMarker({
-      lat: 53.907217,
-      lng: 27.546854,
-      title: 'Отметка 2',          
-    });
-  }
-}
-
-    //added
-
-      
-    
+          
     
 })(jQuery)
 
