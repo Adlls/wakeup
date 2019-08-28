@@ -503,6 +503,10 @@ i:before {
   padding-top: 70px;
 }
 
+.fiindex {
+  height: 450px;
+}
+
 .feature_item {
   border: 1px solid rgba(187, 190, 193, 0.2);
   border-radius: 5px;
@@ -513,6 +517,7 @@ i:before {
 .feature_item .f_icon {
   min-height: 91px;
   position: relative;
+  background-image: url(../3d-shap.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 75px;
