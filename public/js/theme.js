@@ -267,20 +267,23 @@
 
   $("a.more_btn").click( function () {
     let nameProduct = $(this).parent().children("h4").text();
+    let listOfRents = $(this).parent()
+    .children(".card")
+    .children(".listofrents")
+    .children(".card-body")
+    .children("ul").children("li");
 
     $('#orders').fadeIn();
     $('.modal').modal('hide');
     $('#orders').modal('show');
     $(".orderTit").text(nameProduct);
+  
+    $("#options").text("");
+    listOfRents.each(function() {
+      $("#options").append("<option>"+$(this).text()+"</option>");
+    });
     
-   
   });
-
- 
-
-
-
-
 
     /*----------------------------------------------------*/
     /*  Google map js
