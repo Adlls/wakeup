@@ -265,7 +265,19 @@
   activeMenu();
        
 
-  
+  $("a.more_btn").click( function () {
+    let nameProduct = $(this).parent().children("h4").text();
+
+    $('#orders').fadeIn();
+    $('.modal').modal('hide');
+    $('#orders').modal('show');
+    $(".orderTit").text(nameProduct);
+    
+   
+  });
+
+ 
+
 
 
 

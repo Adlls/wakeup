@@ -63,6 +63,7 @@
         padding-bottom: 5px;
     }
     .more_btn{
+
         opacity: 0;
     }
     &:hover{
@@ -716,45 +717,30 @@
 /* Popup order css
 ============================================================================================ */
 
-.popup_area.order {
-    //display: none !important;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-
-    .get_in_touch_area {
-      padding-top: 75px;
-      background-color: white;
-      width: 45%;
-      height: 80%;
-     
-     .contact_us_form {
-      
-      margin: 0;
-      margin-left: 25px;
-      margin-right: 25px;
-     }
-
-     .orderTitle {
-       margin-bottom: 25px;
-       font-size: 30px;
-     }
-      #options {
-        margin-top: 10px;
-      }
-      .btngr {
-        margin: 0 auto;
-        margin-top: 30px;
-      }
-    }
-
+.btn {
+  cursor: pointer;
 }
+
+.contact_us_form {
+  margin-top: 10px !important;
+}
+
+.btngr {
+  margin: 0 auto !important; 
+  padding-top: 20px !important;
+}
+
+#options {
+  margin-top: 10px !important;
+}
+
+#orders {
+  
+  .modal-dialog {
+    margin-top:  100px;
+  }
+}
+
 
 
 

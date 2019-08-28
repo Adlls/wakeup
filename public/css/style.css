@@ -1182,37 +1182,25 @@ i:before {
 ============================================================================================ */
 /* Popup order css
 ============================================================================================ */
-.popup_area.order {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.btn {
+  cursor: pointer;
 }
-.popup_area.order .get_in_touch_area {
-  padding-top: 75px;
-  background-color: white;
-  width: 45%;
-  height: 80%;
+
+.contact_us_form {
+  margin-top: 10px !important;
 }
-.popup_area.order .get_in_touch_area .contact_us_form {
-  margin: 0;
-  margin-left: 25px;
-  margin-right: 25px;
+
+.btngr {
+  margin: 0 auto !important;
+  padding-top: 20px !important;
 }
-.popup_area.order .get_in_touch_area .orderTitle {
-  margin-bottom: 25px;
-  font-size: 30px;
+
+#options {
+  margin-top: 10px !important;
 }
-.popup_area.order .get_in_touch_area #options {
-  margin-top: 10px;
-}
-.popup_area.order .get_in_touch_area .btngr {
-  margin: 0 auto;
-  margin-top: 30px;
+
+#orders .modal-dialog {
+  margin-top: 100px;
 }
 
 /* End popup order css
