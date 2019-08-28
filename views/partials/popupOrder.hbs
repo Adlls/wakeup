@@ -1,0 +1,67 @@
+<section class="popup_area order">
+            <!--================Get in Touch Area =================-->
+        <div class="get_in_touch_area">
+          <div class="container">
+              <label class="col-lg-6 orderTitle">Заказать</label>
+                    
+                        <form class="contact_us_form row" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Имя">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="phone" class="form-control" id="email" name="email" placeholder="Телефон">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <select class="form-control" id="options">
+                                    <option disabled> Выберите срок аренды</option>
+                                    <option>3 дня - 1 500 ₽</option>
+                                    <option>5 дней - 2 000 ₽</option>
+                                    <option>1 неделя - 2300 ₽</option>
+                                </select>
+                            </div>
+                            <div class="form-group btngr">
+                                <button type="submit" value="submit" class="btn submit_btn form-control">Заказать</button>
+                            </div>
+                        </form>
+            </div>
+                   
+               
+          
+        </div>
+        <!--================End Get in Touch Area =================-->
+</section>
+
+        <!--================Contact Success and Error message Area =================-->
+        <div id="success" class="modal modal-message fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h2>Thank you</h2>
+                        <p>Your message is successfully sent...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals error -->
+
+        <div id="error" class="modal modal-message fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h2>Sorry !</h2>
+                        <p> Something went wrong </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--================End Contact Success and Error message Area =================-->
