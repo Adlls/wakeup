@@ -35,34 +35,33 @@ $(document).ready(function(){
             },
             messages: {
                 name: {
-                    required: "come on, you have a name, don't you?",
-                    minlength: "your name must consist of at least 2 characters"
+                    required: "Да ладно, у вас нет имени?",
+                    minlength: "Какое-то у вас короткое имя -_-"
                 },
                 subject: {
-                    required: "come on, you have a subject, don't you?",
-                    minlength: "your subject must consist of at least 4 characters"
+                    required: "Введите тему",
+                    minlength: "Слишком коротко"
                 },
                 number: {
-                    required: "come on, you have a number, don't you?",
-                    minlength: "your Number must consist of at least 5 characters"
+                    required: "Да ладно, у вас нет телефона?",
+                    minlength: "Мне кажется, у вас не так записан номер"
                 },
                 email: {
-                    required: "no email, no message"
+                    required: "Нет email - нет заказа"
                 },
                 message: {
-                    required: "um...yea, you have to write something to send this form.",
-                    minlength: "thats all? really?"
+                    required: "Эмм, да вы должны записать что-то, чтобы отправить форму",
+                    minlength: "Это все?"
                 }
             },
             submitHandler: function(form) {
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),
-                    url:"contact_process.php",
+                    url:"/sendemail",
                     success: function() {
-                        $('#contactForm :input').attr('disabled', 'disabled');
                         $('#contactForm').fadeTo( "slow", 1, function() {
-                            $(this).find(':input').attr('disabled', 'disabled');
+                          //$(this).find(':input').attr('disabled', 'disabled');
                             $(this).find('label').css('cursor','default');
                             $('#success').fadeIn()
                             $('.modal').modal('hide');
