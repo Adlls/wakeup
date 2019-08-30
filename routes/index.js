@@ -4,6 +4,7 @@ const email = require("../node_modules/emailjs/email");
 var titlePages = "Getuse";
 
 var itemsMenu = ["service", "accessories", "contact"];
+
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index', { title: titlePages,
@@ -30,11 +31,24 @@ router.get(`/${itemsMenu[2]}`, (req, res, next) => {
 
 /* POST get mail. */
 router.post('/sendemail', (req, res, next) => {
+  let request = req.body;
   let bodyText = "";
-  if(req.body.name) bodyText += " <b style=\"font-size: 15px;\"> Имя: </b> <b>"+req.body.name+"</b> <br>";
-  if(req.body.email) bodyText += "<b style=\"font-size: 15px;\"> Email: </b> <b>"+req.body.email+"</b><br>";
-  if(req.body.tel) bodyText += "  <b style=\"font-size: 15px;\"> Телефон: </b> <b>"+req.body.tel+"</b><br>";
+  let sub = "";
+  if (request.name) bodyText += " <b style=\"font-size: 15px;\"> Имя: </b> <b>"+request.name+"</b> <br>";
+  if (request.email) bodyText += "<b style=\"font-size: 15px;\"> Email: </b> <b>"+request.email+"</b><br>";
+  if (request.number) bodyText += "<b style=\"font-size: 15px;\"> Телефон: </b> <b>"+request.number+"</b><br>";
+  if (request.term) bodyText += "<b style=\"font-size: 15px;\"> Срок аренды: </b> <b>"+request.term+"</b><br>";
 
+  if (request.isQuestion) {
+    if (request.message) {
+      bodyText += "<b style=\"font-size: 15px;\"> Сообщение: <br> </b> <b style=\"padding-left: 5px;\">"+request.message+"</b><br>";
+      sub = "Запрос от потенциального клиента";
+    }
+  }
+    else if (request.isOrder) {
+      if (request.product) sub += request.product; 
+  }
+  
     var server 	= email.server.connect({
         user:    "saydullaeva.2020@mail.ru", 
         password:"adlanq9806", 
@@ -44,9 +58,9 @@ router.post('/sendemail', (req, res, next) => {
 
     // send the message and get a callback with an error or details of the message that was sent
     server.send({
-        from:    "Client <saydullaeva.2020@mail.ru>", 
-        to:      "someone <adlansaidullaev@gmail.com>",
-        subject: "",
+        from:   titlePages + " <saydullaeva.2020@mail.ru>", 
+        to:      "<adlansaidullaev@gmail.com>",
+        subject: sub,
         attachment: 
         [
           { data:"<html>"+bodyText+"</html>", 

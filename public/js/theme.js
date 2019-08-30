@@ -277,7 +277,7 @@
     $('.modal').modal('hide');
     $('#orders').modal('show');
     $(".orderTit").text(nameProduct);
-  
+    $("#product").val(nameProduct);
     $("#options").text("");
     listOfRents.each(function() {
       $("#options").append("<option>"+$(this).text()+"</option>");

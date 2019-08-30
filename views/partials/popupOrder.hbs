@@ -7,16 +7,18 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <i class="fa fa-close"></i>
                         </button>
-                        <h2 class="orderTit"></h2>
-                       <form class="contact_us_form row" action="/sendemail" method="post" id="contactForm" novalidate="novalidate">
+                        <h2 class="orderTit"></h2>  
+                       <form class="contact_us_form row orderForm" action="/sendemail" method="post" id="" novalidate="novalidate">
+                                <input type="hidden" name="isOrder" value="true">
+                                <input type="hidden" name="product" id="product">
                             <div class="form-group col-lg-6">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Имя">
+                                <input type="text" class="form-control name" id="" name="name" placeholder="Имя">
                             </div>
                             <div class="form-group col-lg-6">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                <input type="email" class="form-control email" id="" name="email" placeholder="Email">
                             </div>
                             <div class="form-group col-lg-6">
-                                <input type="phone" class="form-control" id="tel" name="tel" placeholder="Телефон">
+                                <input type="tel" class="form-control number" id="" name="number" placeholder="Телефон">
                             </div>
                             <div class="form-group col-lg-6">
                                 <select class="form-control" id="options" name="term">
@@ -27,7 +29,6 @@
                                 <button type="submit" value="submit" class="btn submit_btn form-control">Заказать</button>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
@@ -42,8 +43,8 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <i class="fa fa-close"></i>
                         </button>
-                        <h2>Thank you</h2>
-                        <p>Your message is successfully sent...</p>
+                        <h2>Спасибо</h2>
+                        <p>Ваш запрос успешно выполнен</p>
                     </div>
                 </div>
             </div>
@@ -58,8 +59,8 @@
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <i class="fa fa-close"></i>
                         </button>
-                        <h2>Sorry !</h2>
-                        <p> Something went wrong </p>
+                        <h2>Error</h2>
+                        <p>Не удалось выполнить запрос</p>
                     </div>
                 </div>
             </div>
