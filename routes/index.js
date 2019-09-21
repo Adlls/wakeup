@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const email = require("../node_modules/emailjs/email");
-var titlePages = "Getuse";
+var titlePages = "Wakerent";
 
 var itemsMenu = ["service", "accessories", "contact"];
 
