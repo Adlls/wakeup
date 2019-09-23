@@ -1,6 +1,23 @@
 ;(function($) {
     "use strict";
     
+
+    document.body.onload = function() {
+      $("body").css("overflow","hidden");
+      setTimeout(function() {
+         var preloader = document.getElementById('page-preloader');
+         if(!preloader.classList.contains('done')) {
+             preloader.classList.add('done');
+             $(".loader").css("opacity","0");
+             $("body").css("overflow","auto");
+             //$(".loader").removeClass("loader");
+         }
+        }, 1000);
+       
+      };
+    
+
+
     var nav_offset_top = $('header').height(); 
     /*-------------------------------------------------------------------------------
 	  Navbar 
@@ -232,7 +249,7 @@
             type: 'iframe',
             mainClass: 'mfp-fade',
             removalDelay: 160,
-            preloader: false,
+            preloader: true,
 
             fixedContentPos: false
         });
